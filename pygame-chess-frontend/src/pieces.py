@@ -32,9 +32,21 @@ class Piece:
     def move(self, new_position):
         self.position = new_position
 
-class Pawn(Piece): pass
-class Rook(Piece): pass
+class Pawn(Piece):
+    def __init__(self, color, position):
+        super().__init__(color, position)
+        self.has_moved = False
+
+class Rook(Piece):
+    def __init__(self, color, position):
+        super().__init__(color, position)
+        self.has_moved = False
+
+class King(Piece):
+    def __init__(self, color, position):
+        super().__init__(color, position)
+        self.has_moved = False
+
 class Knight(Piece): pass
 class Bishop(Piece): pass
 class Queen(Piece): pass
-class King(Piece): pass
